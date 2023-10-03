@@ -281,14 +281,21 @@
           </div>
         </div>
 
-								        <div class="row">
+        <div class="row">
           <div class="col-md-6">
             <div class="resume-wrap ftco-animate">
               <span class="date">2014 - 2015</span>
               <h2>Computer Graphic Designer (NVQ-Level&nbsp;4)</h2>
-              <span class="position">Vocational Training Center Dehiwala-Sri Lanka</span>
+              <span class="position"
+                >Vocational Training Center Dehiwala-Sri Lanka</span
+              >
               <p class="mt-4">
-                Computer Graphic Designer, trained at Vocational Training Center Dehiwala-Sri Lanka. Expertise in using a variety of design software, including Adobe Photoshop, Illustrator, CorelDraw and InDesign. Proven ability to create visually appealing and effective designs for a variety of media, including print, digital, and web.
+                Computer Graphic Designer, trained at Vocational Training Center
+                Dehiwala-Sri Lanka. Expertise in using a variety of design
+                software, including Adobe Photoshop, Illustrator, CorelDraw and
+                InDesign. Proven ability to create visually appealing and
+                effective designs for a variety of media, including print,
+                digital, and web.
               </p>
             </div>
           </div>
@@ -299,12 +306,14 @@
               <h2>Studio Lab Assistant</h2>
               <span class="position">Shutter Studio Kirillawala-Sri Lanka</span>
               <p class="mt-4">
-                Lab assistant with experience in developing and printing photo negatives. Expertise in using a variety of darkroom equipment and chemicals. Proven ability to produce high-quality prints from a variety of negatives.
+                Lab assistant with experience in developing and printing photo
+                negatives. Expertise in using a variety of darkroom equipment
+                and chemicals. Proven ability to produce high-quality prints
+                from a variety of negatives.
               </p>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -315,7 +324,9 @@
             <h1 class="big big-2">Services</h1>
             <h2 class="mb-4">Services</h2>
             <p>
-              Graphic designer with a passion for creating visually appealing and effective designs for a variety of media, including print, digital, and web. Expertise in layout, color theory, and branding. 
+              Graphic designer with a passion for creating visually appealing
+              and effective designs for a variety of media, including print,
+              digital, and web. Expertise in layout, color theory, and branding.
             </p>
           </div>
         </div>
@@ -391,9 +402,7 @@
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h1 class="big big-2">My Skills</h1>
             <h2 class="mb-4">My Skills</h2>
-            <p>
-              Creative and experienced Graphic Designer
-            </p>
+            <p>Creative and experienced Graphic Designer</p>
           </div>
         </div>
         <div class="row">
@@ -510,11 +519,28 @@
             <h1 class="big big-2">My Projects</h1>
             <h2 class="mb-4">My Projects</h2>
             <p>
-              A collection of my best work, showcasing my skills and experience in graphic design.
+              A collection of my best work, showcasing my skills and experience
+              in graphic design.
             </p>
           </div>
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <p>
+              <span class="text-warning"
+                >This Section is Password Protected. Please Enter the Password
+                to See My Work</span
+              >
+            </p>
+            <form id="password-form">
+              <input type="password" name="password" />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
         </div>
-        <div class="row">
+
+        <div
+          class="test" id="test" style="display: none">
+
+								        <div class="row">
           <div class="col-md-4">
             <div
               class="project img ftco-animate d-flex justify-content-center align-items-center"
@@ -592,6 +618,9 @@
             </div>
           </div>
         </div>
+
+							</div>
+
       </div>
     </section>
 
@@ -1063,8 +1092,38 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-				<script src="https://kit.fontawesome.com/ebfc0c7e09.js" crossorigin="anonymous"></script>
-
+    <script
+      src="https://kit.fontawesome.com/ebfc0c7e09.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
+
+    <script>
+      const passwordForm = document.querySelector("#password-form");
+
+      // Listen for the form submit event
+      passwordForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Get the password from the form
+        const password = passwordForm.querySelector(
+          'input[name="password"]'
+        ).value;
+
+        // Check the password
+        if (password === "test") {
+          // Display the photos
+          // ...
+          // alert('correct password');
+          const element = document.getElementById("test");
+          element.style.display = "block";
+        } else {
+          // Display an error message
+          alert("Incorrect password");
+          const element = document.getElementById("test");
+          element.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
